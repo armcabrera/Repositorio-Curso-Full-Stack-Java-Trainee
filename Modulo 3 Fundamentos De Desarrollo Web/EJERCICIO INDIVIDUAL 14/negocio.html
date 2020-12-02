@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Negocio</title>
+        <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+            
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            
+            header {
+            
+                padding: 15px;
+      
+            }
+            
+            
+            main {
+                width: 100%;
+                float: left;
+                padding: 15px;
+                margin: 1 auto;
+         
+            
+            }
+            
+            aside {
+                width: 100%;
+                float: left;
+                padding: 15px;
+               
+            
+            }
+            
+            
+            body{
+                background-color: cornsilk;
+                
+            }
+            
+            p{
+                text-align: justify;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+            }
+            
+            h1{
+                font-size: 40px;
+                color: rgb(16, 55, 120);
+                text-align: center;
+            }
+            
+            h2{
+                font-size: 30px;
+            }
+            
+            h3{
+                font-size: 30px;
+            }
+            
+            .menu ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .menu li {
+                padding: 10px;
+                margin-bottom: 10px;
+                background-color: #c5c5c5;
+                color: #ffffff;
+                text-transform: uppercase;
+            
+            }
+            
+            .menu li:hover {
+                background-color: #0099cc;
+            }
+            
+            
+            
+            table{
+                  
+                    text-align: left ;
+            }
+            
+            th, td {
+               
+                text-align: left;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+            }
+            
+            footer {
+                
+                display: block;
+                background-color: #FF3700;
+                color: #ffffff;
+                text-align: center;
+                font-size: 12px;
+                padding: 25px;
+            }
+            
+            
+            
+            @media only screen and (max-width: 768px) {
+                /* Para Celular */
+                [class*="col-"] {
+                width: 100%;
+                }
+            }
+            
+            @media only screen and (min-width: 600px) {
+                /* Para Tabletas */
+                .col-s-1 {width: 8.33%;}
+                .col-s-2 {width: 16.66%;}
+                .col-s-3 {width: 25%;}
+                .col-s-4 {width: 33.33%;}
+                .col-s-5 {width: 41.66%;}
+                .col-s-6 {width: 50%;}
+                .col-s-7 {width: 58.33%;}
+                .col-s-8 {width: 66.66%;}
+                .col-s-9 {width: 75%;}
+                .col-s-10 {width: 83.33%;}
+                .col-s-11 {width: 91.66%;}
+                .col-s-12 {width: 100%;}
+            }
+            @media only screen and (min-width: 768px) {
+                /* Para PC */
+                .col-1 {width: 8.33%;}
+                .col-2 {width: 16.66%;}
+                .col-3 {width: 25%;}
+                .col-4 {width: 33.33%;}
+                .col-5 {width: 41.66%;}
+                .col-6 {width: 50%;}
+                .col-7 {width: 58.33%;}
+                .col-8 {width: 66.66%;}
+                .col-9 {width: 75%;}
+                .col-10 {width: 83.33%;}
+                .col-11 {width: 91.66%;}
+                .col-12 {width: 100%;}
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Historia Del Negocio</h1>
+    
+        </header>
+
+        <div class="row">
+
+            <main class="col-9 col-s-12 main">
+                <p>
+                    <img width="260px" align=left  src="https://www.muycomputerpro.com/wp-content/uploads/2016/07/As%C3%AD-ser%C3%A1-el-desarrollo-de-software-en-la-pr%C3%B3xima-d%C3%A9cada.jpg">
+                    Somos una empresa de <b>Desarrollo De Software.</b> Nuestra misión es solucionar las necesidades de nuestros clientes, integrándolos
+                    en nuevas tecnologías e incrementar su transformación tecnológicas.
+                    Nuestros esfuerzos van dirigidos a crear soluciones concretas para problemas específicos, partiendo siempre de metodologías ágiles de 
+                    desarrollo.
+                    Los software que creamos son modulares y permiten su crecimiento, adaptación y cambios a medio-largo plazo.
+                    Nuestra empresa fue fundada en el año 2020 por Armando Cabrera (Desarrollador De Aplicaciones Full Stack Java Trainee), 
+                    junto con 2 socios (Jacob Vega y Oscar Gonzáles)
+            
+                </p>
+
+
+            </main>
+
+            <aside class="col-3 col-s-12 aside menu">
+                <ul>
+                    <h3>Menu</h3>   
+                    <li><a href="ingreso.html">Ingresar Formulario Ingreso</a></li>
+
+                </ul>
+
+
+            </aside>
+
+            <main class="col-9 col-s-12 main">
+
+                <h2>Ubicacion y Sucursales</h2>
+                <p>
+                      Nuestra casa matriz se encuentra ubicada en Chile, Región Metropolitana, comuna de Pirque y actualmente contamos con una sucursal en La Serena y otra en Concepción.<br>
+                
+
+                     <a href="https://goo.gl/maps/pqfT7tm4UuW3BNyf6" target="_blank"><img width="200px" src="https://www.compite.cl/hubfs/mapa-sucursales-le-garraf.png" alt=""></a>
+
+                </p>
+
+            </main>
+
+            <aside class="col-3 col-s-12 aside menu">
+                <ul>
+                    <h3>Link Interes</h3>   
+                    <li><a href="https://www.crecic.cl/portfolio/desarrollo/">crecic</a></li>
+                    <li><a href="https://actus.cl/">Actus</a></li>
+                    <li><a href="https://neuronet.cl/consultoria/desarrollo-de-software/">NeuroNet</a></li>
+                </ul>
+
+            </aside>
+
+            <main class="col-9 col-s-12 main">
+
+                <h2>Servicios Ofrecidos</h2>
+
+                    <p>
+                         Dentro de los productos en los que trabajamos estamos especializados en:<br><br>
+
+                        <table>
+
+                            <tr>
+                                <td><li>Desarrollo De Software.</li></td>
+                                <td rowspan="7"> <img width="200px" src="https://img2.freepng.es/20180702/xkb/kisspng-computer-software-software-development-business-so-5b3a9e8db3a1d6.0691323915305683337358.jpg"/> </td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td><li>Aplicaciones Móviles.</li></td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td><li>Desarrollo Web.</li></td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td><li>Desarrollo loT.</li></td>
+                            
+                            </tr>
+
+                            <tr>
+                                <td><li>Posicionamiento SEO.</li></td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td><li>Marketing Digital.</li></td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td><li>Comercio Electrónico.</li></td>
+                                
+                            </tr>
+
+                        </table>
+
+                    </p>
+    
+               
+    
+            </main>
+
+            <aside class="col-3 col-s-12 aside">
+
+                
+                <button id="despliega">Desplegar secciones</button>
+                
+
+            </aside>
+
+        </div>
+
+        <footer>
+
+
+        </footer>
+
+        <script>
+            $(document).ready(
+                function(){
+    
+                    $("p").click(
+                        function(){
+                            $(this).fadeOut(1000);
+                        }
+                    );
+    
+                    $("#despliega").click(
+                        function(){
+                            $("p").fadeIn(1000);
+                        }
+                    );
+    
+                }
+            );
+        </script>
+    
+    </body>
+</html>

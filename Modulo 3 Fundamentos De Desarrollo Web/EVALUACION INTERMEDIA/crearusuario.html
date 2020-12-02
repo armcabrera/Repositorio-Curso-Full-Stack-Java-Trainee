@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" href="hojaestilo.css"/>
+    <link rel="shorcut icon" href="icon.ico" type="imagen/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Ingrese Datos Del Usuario</h1>
+    </header>
+    
+    <div class="row">
+    
+        <main class="col-9 col-s-12 main">
+    
+            <table>
+                <form>
+                    <tr>
+                        <td><label for="nombre">Nombres:</label></td>
+                        <td><input type="text" name="txtnombre"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td><label for="apelllido">Apellidos</label></td>
+                        <td><input type="text" name="txtapellido"></td> 
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td><label for="fechanac">Fecha Nacimiento:</label></td>
+                        <td><input type="date" name="fechanac"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="run">Run:</label></td>
+                        <td><input type="text" name="txtrun"></td>
+                    </tr>
+                    <tr></tr>
+
+                    <tr>
+                        <td><label for="tipousuario">Tipo Usuario:</label></td>
+                        <td> 
+                            <select name="tipousuario">
+
+                                <option selected value="0"> Elige una opción </option>
+                               
+                                <option value="1">Cliente</option> 
+                                <option value="2">Administrativo</option> 
+                                <option value="3">Profesional</option> 
+                                                          
+                            </select> </td>
+                    </tr>    
+
+                    <tr>
+                        <td><input type="submit" value="Enviar" name="btnenviar"></td>
+                        <td><input type="reset" value="Borrar Datos" name="btnborrar"></td>
+                    </tr>
+            
+                </form>
+            </table>
+    
+        </main>
+    
+        <aside class="col-6 col-s-12 aside menu">
+    
+            <h3>Menu</h3>
+            
+            <ul>
+                <li><a href="INDEX.html">Volver Pagina Principal</a></li>
+            </ul>
+    
+        </aside>
+    
+    </div>
+
+    <footer>
+        
+    </footer>
+    
+</body>
+</html>

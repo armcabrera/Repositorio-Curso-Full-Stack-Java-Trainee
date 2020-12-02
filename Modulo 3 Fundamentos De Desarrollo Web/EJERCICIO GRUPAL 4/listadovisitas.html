@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Visitas</title>
+    <link rel="stylesheet" href="hojaestilo.css"/>
+    <link rel="shorcut icon" href="icon.ico" type="imagen/x-icon">
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>Listado De Visitas</h1>
+
+    </header>
+
+    <div class="row">
+        <main class="col-9 col-s-12 main">
+
+            <table>
+
+                <tr class="mayuscula">
+                    <td>ID Visita</td>
+                    <td>Fecha</td>
+                    <td>hora</td>
+                    <td>Rut Cliente</td>
+                    <td>Nombre Del Cliente</td>
+                    <td>Acceder Listado</td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>26-11-2020</td>
+                    <td>14:00</td>
+                    <td>14258369-5</td>
+                    <td>Juan Perez</td>
+                    <td><img  width="30px" src="modificar.ico" alt=""  onclick="ConfirmDemo()"></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>27-11-2020</td>
+                    <td>14:30</td>
+                    <td>14000258-9</td>
+                    <td>Andrea Lopez</td>
+                    <td><img  width="30px" src="modificar.ico" alt=""  onclick="ConfirmDemo()"></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>28-11-2020</td>
+                    <td>15:00</td>
+                    <td>15632789-8</td>
+                    <td>Marcela Tobar</td>
+                    <td><img  width="30px" src="modificar.ico" alt=""  onclick="ConfirmDemo()"></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>29-11-2020</td>
+                    <td>15:30</td>
+                    <td>14789147-6</td>
+                    <td>Ignacia Zuñiga</td>
+                    <td><img  width="30px" src="modificar.ico" alt=""  onclick="ConfirmDemo()"></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>30-11-2020</td>
+                    <td>16:00</td>
+                    <td>10257102-4</td>
+                    <td>Daniela Escobar</td>
+                    <td><img  width="30px" src="modificar.ico" alt=""  onclick="ConfirmDemo()"></td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>01-12-2020</td>
+                    <td>16:30</td>
+                    <td>13753147-4</td>
+                    <td>Martin Falcon</td>
+                    <td><img  width="30px" src="modificar.ico" alt=""  onclick="ConfirmDemo()"></td>
+                </tr>
+
+
+
+            </table>
+
+        </main>
+        
+
+    </div>
+
+    <footer></footer>
+
+    <script>
+
+        function ConfirmDemo() {
+
+        var mensaje = confirm("¿Desea Validar y Modificar Los Chequeos De Esta Visita?")
+
+        if (mensaje) {
+        location.href="responderchecklist.html";
+        }
+
+        }
+
+    </script>
+    
+</body>
+
+
+
+</html>

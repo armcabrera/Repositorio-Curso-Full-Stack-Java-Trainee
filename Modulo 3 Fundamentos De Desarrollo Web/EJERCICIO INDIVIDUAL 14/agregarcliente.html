@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario Cliente</title>
+        <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+       <!--  <script type="text/javascript" src="validaciones.js"></script> -->
+        
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+            
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            
+            header {
+            
+                padding: 15px;
+    
+            }
+            
+            
+            main {
+                width: 100%;
+                float: left;
+                padding: 15px;
+                margin: 1 auto; 
+            
+            }
+            
+            aside {
+                width: 100%;
+                float: left;
+                padding: 15px;
+            
+            
+            }
+            
+            
+            body{
+                background-color: cornsilk;
+                
+            }
+            
+            p{
+                text-align: justify;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+            }
+            
+            h1{
+                font-size: 40px;
+                color: rgb(16, 55, 120);
+                text-align: center;
+            }
+            
+            h2{
+                font-size: 30px;
+            }
+            
+            h3{
+                font-size: 30px;
+            }
+            
+            .menu ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .menu li {
+                padding: 10px;
+                margin-bottom: 10px;
+                background-color: #c5c5c5;
+                color: #ffffff;
+                text-transform: uppercase;
+            
+            }
+            
+            .menu li:hover {
+                background-color: #0099cc;
+            }
+            
+            
+            
+            table{
+                
+                    text-align: left ;
+            }
+            
+            th, td {
+            
+                text-align: left;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+            }
+            
+            footer {
+                
+                display: block;
+                background-color: #FF3700;
+                color: #ffffff;
+                text-align: center;
+                font-size: 12px;
+                padding: 25px;
+            }
+            
+            
+            
+            @media only screen and (max-width: 768px) {
+                /* Para Celular */
+                [class*="col-"] {
+                width: 100%;
+                }
+            }
+            
+            @media only screen and (min-width: 600px) {
+                /* Para Tabletas */
+                .col-s-1 {width: 8.33%;}
+                .col-s-2 {width: 16.66%;}
+                .col-s-3 {width: 25%;}
+                .col-s-4 {width: 33.33%;}
+                .col-s-5 {width: 41.66%;}
+                .col-s-6 {width: 50%;}
+                .col-s-7 {width: 58.33%;}
+                .col-s-8 {width: 66.66%;}
+                .col-s-9 {width: 75%;}
+                .col-s-10 {width: 83.33%;}
+                .col-s-11 {width: 91.66%;}
+                .col-s-12 {width: 100%;}
+            }
+            @media only screen and (min-width: 768px) {
+                /* Para PC */
+                .col-1 {width: 8.33%;}
+                .col-2 {width: 16.66%;}
+                .col-3 {width: 25%;}
+                .col-4 {width: 33.33%;}
+                .col-5 {width: 41.66%;}
+                .col-6 {width: 50%;}
+                .col-7 {width: 58.33%;}
+                .col-8 {width: 66.66%;}
+                .col-9 {width: 75%;}
+                .col-10 {width: 83.33%;}
+                .col-11 {width: 91.66%;}
+                .col-12 {width: 100%;}
+            }
+
+        </style>
+
+        
+
+
+    </head>
+
+
+    <body>
+
+        <header>
+            <h1>Ingrese Datos Del Cliente</h1>
+        </header>
+
+        <div id="envio_error"></div>
+
+        <div class="row">
+
+            <main class="col-6 col-s-12 main">
+
+                <form>
+
+                    <table>
+                        
+                        
+                            <tr>
+                                <td>Nombres:</td>
+                                <td><input type="text" name="textnombre" id="textnombre"></td>
+                            </tr>
+            
+                            <tr></tr>
+            
+                            <tr>
+                                <td>Apellidos:</td>
+                                <td><input type="text" name="textapellidos" id="textapellidos" /></td>
+                            </tr>
+            
+                            <tr></tr>
+            
+                            <tr>
+                                <td>Direccion:</td>
+                                <td><input type="text" name="textdireccion" id="textdireccion" /></td>
+                            </tr>
+            
+                            <tr></tr>
+            
+                            <tr>
+                                <td>Telefono:</td>
+                                <td><input type="text" name="texttelefono" id="texttelefono" placeholder="+56976284353" maxlength="12"  /></td>
+                            </tr>
+            
+                            <tr></tr> 
+            
+                            <tr>
+                                <td><input type="button" onclick="validarcliente()" name="btningresar" value="Validar"></td>
+                                <td><input type="reset" value="Limpiar Datos"></td>
+                            </tr>
+                        
+            
+                    </table>
+                </form>    
+
+            </main>
+
+            
+
+        </div>
+        
+
+        <footer>
+        
+        </footer>
+
+        <script>
+
+            function validarcliente(){
+        
+              
+        
+                var nombre = document.getElementById("textnombre").value;
+                var apellido = document.getElementById("textapellidos").value;
+                var direccion = document.getElementById("textdireccion").value;
+                var telefono = document.getElementById("texttelefono").value;
+               
+                var cont = 0;
+                
+                if(nombre==null || nombre.length==0 || nombre.length >=8){
+                   
+                    document.getElementById("textnombre").style.background="#EDF98E";
+                    document.getElementById("textnombre").style.borderColor="#000000"
+                }else {
+                    document.getElementById("textnombre").style.background="#ffffff";
+                    document.getElementById("textnombre").style.borderColor="#9A9797"
+                    cont ++;
+                }     
+
+            
+
+                if(apellido==null || apellido.length==0 || apellido.length >=8){
+                   
+                    document.getElementById("textapellidos").style.background="#EDF98E";
+                    document.getElementById("textapellidos").style.borderColor="#000000"
+                }else {
+                    document.getElementById("textapellidos").style.background="#ffffff";
+                    document.getElementById("textapellidos").style.borderColor="#9A9797"
+                    cont ++;
+                }   
+
+                
+                if(direccion.length >=70){
+               
+                    document.getElementById("textdireccion").style.background="#EDF98E";
+                    document.getElementById("textdireccion").style.borderColor="#000000"
+                }else {
+                    document.getElementById("textdireccion").style.background="#ffffff";
+                    document.getElementById("textdireccion").style.borderColor="#9A9797"
+                    cont ++;
+                }   
+
+
+                
+
+                
+               if(telefono.charAt(0)!=="+" || telefono.charAt(1)!=="5" || telefono.charAt(2)!=="6" || telefono.charAt(3)!=="9"
+                     || isNaN(telefono.charAt(4)) || telefono.charAt(4)=="" || isNaN(telefono.charAt(5)) || telefono.charAt(5)==""
+                     || isNaN(telefono.charAt(6)) || telefono.charAt(6)=="" || isNaN(telefono.charAt(7)) || telefono.charAt(7)==""
+                     || isNaN(telefono.charAt(8)) || telefono.charAt(8)=="" || isNaN(telefono.charAt(9)) || telefono.charAt(9)==""
+                     || isNaN(telefono.charAt(10)) || telefono.charAt(10)=="" || isNaN(telefono.charAt(11)) || telefono.charAt(11)==""){
+                    document.getElementById("texttelefono").style.background="#EDF98E";
+                    document.getElementById("texttelefono").style.borderColor="#000000"
+                }else {
+                    document.getElementById("texttelefono").style.background="#ffffff";
+                    document.getElementById("texttelefono").style.borderColor="#9A9797"
+                    cont ++;
+                } 
+
+
+                if(cont==4){
+                    alert("Todos Los Datos Son Validos");
+
+                }
+
+        
+            }
+
+        
+        </script> 
+
+       
+    </body>
+</html>

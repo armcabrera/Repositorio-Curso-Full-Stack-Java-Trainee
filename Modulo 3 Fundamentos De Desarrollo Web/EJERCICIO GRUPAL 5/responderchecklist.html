@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responder Check</title>
+        <link rel="stylesheet" href="hojaestilo.css" />
+        <link rel="shorcut icon" href="icon.ico" type="imagen/x-icon">
+
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Listado De Chequeos</h1>
+        </header>
+
+        <div class="row">
+
+            <main class="col-4 col-s-12 main">
+
+
+
+                <form id="formchek">
+
+                    <div id="listado">
+                        
+                        <input type="checkbox" name="checkbox"><label id="chk0">Implementos Seguridad</label><br><br>
+                        <input type="checkbox" name="checkbox"><label id="chk1">Protocolo De Seguridad</label><br><br>
+                        <input type="checkbox" name="checkbox"><label id="chk2">Vestimenta De Seguridad</label><br><br>
+                        <input type="checkbox" name="checkbox"><label id="chk3">Manual De Seguridad</label><br><br><br>
+
+                        <input type="button" id="añade" onclick="mostrarchek()" value="Listar Chequeos" />
+                        <input type="button" value="Borrar Chek" onclick="location.reload()">
+                        
+                    </div>
+
+                </form>
+
+
+            </main>
+
+
+            <Div class="col-4 col-s-12" id="divmostardor"> </Div>
+
+            <aside class="col-4 col-s-12 aside menu">
+    
+                <h3>Menu</h3>
+    
+                <ul>
+                    <li><a href="INDEX.html">Volver Pagina Principal</a></li>
+                    <li><a href="listadovisitas.html">Volver Listado Visitas</a></li>
+                </ul>
+        
+            </aside>
+
+        </div>
+
+       
+        <footer></footer>
+        
+
+        <script type="text/javascript">
+
+            function mostrarchek() {
+
+                var checkboxes = document.getElementById("formchek").checkbox;
+
+                var cont = 0;
+
+                for (var x = 0; x < checkboxes.length; x++) {
+                    if (checkboxes[x].checked) {
+                        cont = cont + 1;
+                    }
+                }
+
+                if (cont == 0) {
+
+                    alert("Debe Seleccionar Al Menos Un Chequeo");
+                }
+                else {
+                    document.getElementById("divmostardor").innerHTML = "<h3>Chequeos Seleccionados</h3>";
+                    for (var x = 0; x < checkboxes.length; x++) {
+                        if (checkboxes[x].checked) {
+                            var listado = document.getElementById("chk" + x).innerHTML;
+                            document.getElementById("divmostardor").innerHTML += "<li>" + listado + "</li><br>";
+                        }
+                    }
+                }
+            }
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crear Pagos</title>
+        <link rel="stylesheet" href="hojaestilo.css"/>
+        <link rel="shortcut icon" href="icon.ico" type="imagen/x-icon">
+        <script type="text/javascript" src="JavaScrip.js"></script>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>Crear Pagos</h1>
+
+        </header>
+
+        <div class="row">
+
+            <main class="col-6 col-s-12 main">
+
+                <table>
+
+                    <form id="form1" name="form1" method="POST" action="">
+
+                        <tr>
+
+                            <td>Monto De Pago:</td>
+                            <td><input type="text" name="textmontopago" id="textmontopago" placeholder="$"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Mes De Pago</td>
+                            <td>
+
+                                <select id="mes">
+                                    <option selected value="0">Elige Un Mes</option>
+                                    <option value="1">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                    <option value="4">Abril</option>
+                                    <option value="5">Mayo</option>
+                                    <option value="6">Junio</option>
+                                    <option value="7">Julio</option>
+                                    <option value="8">Agosto</option>
+                                    <option value="9">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                    
+
+                                </select> 
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Año De Pago:</td>
+                            <td>
+                                <select class= "selec" name="anio" id="anio" onclick="mostraranio()">
+                                    <option selected value="0">Elige Un Año</option>
+                            
+                            </select>
+                            </td>
+                           
+
+                        </tr>
+
+                        <tr>
+                            <td>Rut Cliente:</td>
+                            <td><input type="text" name="txtrutcliente" id="txtrutcliente" placeholder="ej:12345678-9"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Fecha Pago:</td>
+                            <td>
+                                <script>
+                                    var f = new Date();
+                                    document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+                                    </script>
+                                
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" onclick="validarpago()" value="Enviar"></td>
+                            <td><input type="reset" value="Limpiar"></td>
+                        </tr>
+
+                        
+
+                      
+
+                    </form>
+
+                </table>
+
+            </main>
+
+            <footer>
+                
+            </footer>
+
+        </div>
+        
+    </body>
+
+</html>

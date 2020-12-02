@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(213, 219, 219 );
+    
+}
+
+p{
+    color: rgb(19, 39, 126);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: justify;
+    
+}
+
+h1{
+    font-size: 40px;
+    color: rgb(16, 55, 120);
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+#referencia {
+    padding: 0;
+    }
+
+#referencia li a {
+    font-family: Arial;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #7a7a7a;
+    color: #fff;
+    }

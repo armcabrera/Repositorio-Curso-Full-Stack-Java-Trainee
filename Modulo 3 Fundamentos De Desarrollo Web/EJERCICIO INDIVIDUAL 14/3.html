@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+   
+          <div id="stickerTitle">
+            <h1>Supscriptions</h1>
+          </div>
+          <div id="etiquetas-seleccionadas">
+            <p>Etiquetas seleccionadas</p>
+          </div>
+          <form class="fsticker" action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>" method ="post">
+            <select id="mySelect" onchange="myFunction()">
+              <option value="">elejir</option>
+              <option value="">-----------</option>
+
+              <option value="Arroz">Arroz</option>
+              <option value="Azucar">azucar</option>
+              <option value="Fideos">Fideos</option>
+              <option value="Salsa">Salsa</option>
+              <option value="Manjar">Manjar</option>
+
+            </select>
+            <button id="Bsticker" type= submit >Modify</button>
+          </form>
+        
+      </div>
+
+
+      <script>
+
+
+function myFunction() {
+    var select = document.getElementById("mySelect");
+    var x = document.getElementById("mySelect").value;
+    var child = document.getElementById("mySelect").children;
+    var segments = ['grupo1'];
+    var grupo1 = ['Arroz', 'Azucar', 'Fideos', 'Salsa','Manjar'];
+
+    document.getElementById("etiquetas-seleccionadas").append(x + ' | ');
+
+    for (let item of child) {
+      if(item.value == x) {
+        //console.dir("Encontrado --> " + item.value);
+        //borrar aquellos items que pertenecen a un segmento
+        //console.dir("Array Segments:");
+        //console.dir(segments.indexOf(item.value));
+        if (segments.indexOf(item.value) >= 0) {
+          //console.dir("Es un segmento: " + item.value);
+          if(segments.indexOf(item.value) == 0) {
+            //console.dir("Es el segmento grupo1: " + item.value);
+              for(let item2 of child) {
+                if(grupo1.indexOf(item2.value) >= 0) {
+                  //console.dir("Se borran todos los que pertenecen a grupo1");
+                  //console.dir("Son: " + item2.value);
+                  //$item2.prop('disabled', true);
+                }
+
+              }
+          }
+        }else {
+          //console.dir("Es una item: " + item.value)
+          select.options[select.selectedIndex].style.display = "none";
+        }
+      }
+    }
+  }
+      </script>
+    
+</body>
+</html>

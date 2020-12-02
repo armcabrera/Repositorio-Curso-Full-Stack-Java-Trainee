@@ -1,0 +1,10 @@
+body {
+    background:#EC6060;
+  }
+  body::before {
+    content:"Soy un fichero CSS llamado estilos.css";
+    color:#FFF;
+    display:block;
+    font-size:36px;
+    padding:10px
+  }

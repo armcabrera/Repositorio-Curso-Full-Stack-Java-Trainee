@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editar Cliente</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="Javaeditarcliente.js"></script>
+        <link rel="stylesheet" href="hojaestilo.css"/>
+        <link rel="shorcut icon" href="icon.ico" type="imagen/x-icon">
+
+    </head>
+
+
+    <body>
+
+        <header>
+
+            <h1>Editar Cliente</h1>
+            
+        </header>
+
+        <div class="row">
+
+            <main class="col-6 col-s-12 main">
+
+
+      
+
+                <form id="form1" action="" method="post">
+
+                    <p>
+
+                        <label for="rut">Rut Cliente:<span></span></label></br>
+                        <input id="rut" name="rut" maxlength="10"></br>
+
+                    </p>
+
+                    <p>
+
+                        <label for="nombre">Nombre<span></span></label></br>
+                        <input id="nombre" name="nombre" maxlength="50" ></br>
+
+                    </p>
+
+                        <p>
+
+                        <label for="apellido">Apellido:<span></span></br>
+                        <input id="apellido" name="apellido" maxlength="50"></br>
+
+                    </p>
+
+                    <p>
+
+                            
+                        <label for="telefono">Telefono<span></span></br>
+                        <input id="telefono" name="telefono" maxlength="12"></br>
+
+                    </p>
+
+                    <p>
+
+                        <label for="afp">AFP <span></span></label></br>
+                        <input id="afp" name="afp"></br>
+
+                    </p>
+
+                    <p>
+
+                        <label for="sistemasalud">Sistema Salud:</label></br>
+                        
+                        <select name="sistemasalud" id="sistemasalud">
+                            <option selected value="default"> Elige Sistema Salud </option>
+                            <option value="1">Fonasa</option> 
+                            <option value="2">Isapre</option> 
+                            <option value="3">Particular</option>  
+                          
+                        </select>
+
+                    </p>
+
+                    <p>
+
+                        <label for="direccion">Direccion:<span></span></label></br>
+                        <input id="direccion" name="direccion"></br>
+                    
+
+                    </p>
+
+                    <p>
+
+                        <label for="comuna">Comuna:<span></span></label></br>
+                        <input id="comuna" name="comuna"></br>
+
+                    </p>
+
+                    <p>
+
+                        <label for="edad">Edad:<span></span></label></br>
+                        <input id="edad" name="edad"></br>
+
+                    </p>
+                       
+                        
+                    <p>
+
+                        <input class="submit" type="submit" value="Validar">
+
+                    </p>
+
+                </form>
+            
+            </main>
+
+        </div>
+      
+    </body>
+
+</html>
