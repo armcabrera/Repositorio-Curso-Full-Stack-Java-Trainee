@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crear Factura</title>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script type="text/javascript" src="javaScriptcrearfactura.js"></script>
+        <link rel="stylesheet" href="estilocrear factura.css"/>
+        <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>Crear Factura</h1>
+
+        </header>
+
+        <div class="row">
+
+            <main class="col-6 main">
+
+                <form id="formfactura" method="POST" action="">
+
+                    <p>
+
+                        <label for="idfactura"> ID Factura:</label><br/>
+                        <input id="idfactura" type="text" name="idfactura" maxlength="5"><br>
+
+                    </p>
+
+                   <p>
+
+                        <label for="idventa"> ID Venta:</label><br>
+                        <input  id="idventa" type="text" name="idventa"><br/>
+
+                   </p>
+
+                   <p>
+
+                        <label for="fecgeneracion">Fecha generación:</label><br>
+                        <input id="fecgeneracion" type="text" name="fecgeneracion" readonly><br/>
+
+                   </p>
+
+                   <p>
+
+                        <label for="fecpago">Fecha pago:</label><br>
+                        <input id="fecpago" type="text" name="fecpago" readonly><br/>
+
+                   </p>
+
+                   <p>
+
+                        <label for="subtotal">subtotal:</label><br>
+                        <input id="subtotal" type="text" name="subtotal"><br/>
+
+                   </p>
+
+                    <p>
+
+                        <label for="impuesto">Impuesto:</label><br>
+                        <input id="impuesto" type="text" name="impuesto"><br/>
+
+                    </p>
+
+                    <p>
+
+                        <label for="total">Total:</label><br>
+                        <input id="total" type="text" name="total"><br/>
+
+                    </p>
+
+                    <p>
+
+                        <input type="submit" value="Validar">
+
+                    </p>
+                   
+                </form>
+
+
+            </main>
+
+
+        </div>
+
+        <footer></footer>
+        
+    </body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="eS">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reportes</title>
+        <link rel="stylesheet" href="hojaestilo.css"/>
+        <link rel="shorcut icon" href="icon.ico" type="imagen/x-icon">
+        <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js" ></script>
+        <script src="https://www.chartjs.org/samples/latest/utils.js" ></script>
+        <script type="text/javascript" src="javabarras.js"></script>
+        <style>
+			canvas{
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+			</style>
+
+    </head>
+
+    <body>
+
+        <div class="row">
+
+           <main  id="container" class="col-4">
+
+            <h3>Grafico De Barras</h3>
+
+            <canvas id="canvas" width="600" height="550"></canvas>
+
+           </main> 
+
+           <main class="col-4">
+           
+            <h3>Grafico De Lineas</h3>
+
+            <canvas id="speedChart" width="600" height="550"></canvas>
+
+
+           </main>
+
+           <main class="col-4">
+
+            <h3>Grafico De Torta</h3>
+
+            <canvas id="myChart" width="600" height="550"></canvas>
+
+           </main>
+
+
+
+        </div>
+
+        <footer></footer>
+
+        <script>
+
+var MONTHS = ['Valparaiso', 'Pirque', 'Puente Alto', 'La Florida','Renca'];
+var color = Chart.helpers.color;
+var barChartData = {
+    labels: ['Valparaiso', 'Pirque', 'Puente Alto', 'La Florida','Renca'],
+    datasets: [{
+        label: 'Clientes',
+        backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+        borderColor: window.chartColors.red,
+        borderWidth: 1,
+        data: [
+            14,
+            23,
+            17,
+            8,
+            38
+        ]
+    }, 
+        
+    ]
+
+};
+
+window.onload = function() {
+    var ctx = document.getElementById('canvas').getContext('2d');
+    window.myBar = new Chart(ctx, {
+        type: 'bar',
+        data: barChartData,
+        options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            }
+        }
+    });
+
+};
+
+        </script>
+        
+  
+        
+        <script>
+
+            var speedCanvas = document.getElementById("speedChart");
+
+            Chart.defaults.global.defaultFontFamily = "Lato";
+            Chart.defaults.global.defaultFontSize = 18;
+
+            var dataFirst = {
+                label: "Cantidad De Accidentes",
+                data: [0, 59, 75, 20, 20, 55, 40, 33, 23, 9, 62, 11],
+                lineTension: 0,
+                fill: false,
+                borderColor: 'red'
+            };
+
+            var dataSecond = {
+                label: "Cantidad De Visitas",
+                data: [20, 15, 60, 60, 65, 30, 70, 12, 0, 45, 25, 5],
+                lineTension: 0,
+                fill: false,
+            borderColor: 'blue'
+            };
+
+            var speedData = {
+            labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+            datasets: [dataFirst, dataSecond]
+            };
+
+            var chartOptions = {
+            legend: {
+                display: true,
+                position: 'top',
+                labels: {
+                boxWidth: 80,
+                fontColor: 'black'
+                }
+            }
+            };
+
+            var lineChart = new Chart(speedCanvas, {
+            type: 'line',
+            data: speedData,
+            options: chartOptions
+            });
+
+        </script>
+
+
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'doughnut',
+                data:{
+                datasets: [{
+                    data: [44,36, 20],
+                    backgroundColor: ['red', 'green','blue'],
+                    label: 'Chequeos'}],
+                    labels: ['chequeos de visitas cumplidos','chequeos de visitas cumplidos no cumplidos','chequeos de visitas cumplidos con observación']},
+                options: {responsive: true}
+            });
+        </script>
+
+
+        
+    </body>
+
+</html>

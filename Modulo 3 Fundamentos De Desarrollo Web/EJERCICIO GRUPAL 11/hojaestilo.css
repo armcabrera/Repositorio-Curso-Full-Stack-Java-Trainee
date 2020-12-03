@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  header {
+
+    padding: 15px;
+  }
+
+
+  main {
+    width: 100%;
+    float: left;
+    padding: 15px;
+  
+  }
+
+  aside {
+    width: 100%;
+    float: left;
+    padding: 15px;
+   
+  }
+
+  div {
+    width: 100%;
+    float: left;
+    padding: 15px;
+   
+  }
+
+
+body{
+  
+    background-color: rgb(213, 219, 219 );
+    
+}
+
+
+
+.body:before{
+  background-color: blue;
+}
+
+p{
+    color: rgb(19, 39, 126);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: justify;
+    
+}
+
+h1{
+    font-size: 40px;
+    color: rgb(16, 55, 120);
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #c5c5c5;
+    color: #ffffff;
+    text-transform: uppercase;
+   
+  }
+  
+  .menu li:hover {
+    background-color: #0099cc;
+  }
+
+
+
+table{
+        border: 1px solid black;
+        text-align: center;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+
+.sinborde{
+    border: 0px  hidden;
+    text-align: left;
+}
+  
+
+
+footer {
+    float: left;
+    width: 100%;
+    display: block;
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 45px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    /* Para Celular */
+    [class*="col-"] {
+      width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* Para Tabletas */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* Para PC */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+  .mayuscula{
+    text-transform: uppercase;
+  }
+
+  figcaption {
+  display:none; 
+  transition: all .5s;
+  }
+
+  figure:hover > figcaption {
+  display:block;
+  transition: all .5s;
+  }
+
+  .myApp
+{
+    border-bottom-color:#FF0000;
+}
