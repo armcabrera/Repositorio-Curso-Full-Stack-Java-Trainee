@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dos Listas</title>
+
+        <script type="text/javascript" src="javaScript.js"></script>
+        <link rel="stylesheet" href="hojaestilo.css"/>
+        <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+    </head>
+
+
+    <body>
+
+       <header>
+
+        <h1>Ingreso Datos</h1>
+
+       </header> 
+
+        <div class="row">
+
+            <main class="col-6 col-s-12 main">
+
+                <h2>Lista Desordenada</h2>
+
+                <ul id="listdesor"  type="square"></ul>
+
+            </main>
+
+            <main class="col-6 col-s-12 main">
+
+                <h2>Lista Ordenada</h2>
+
+                <ul id="listorden" style= "list-style-type: upper-roman"></ul>
+
+            </main>
+
+            <main class="col-6 col-s-12 main">
+
+                <table>
+
+
+                    <tr>
+
+                        <td><label>Ingreso Lista Desordenada</label></td>
+                        <td><input type="radio" name="lista" id="radio1" ></td>
+    
+                    </tr>
+
+                   
+
+                   
+
+                    <tr>
+
+                        <td><label>Ingreso Lista Ordenada</label></td>
+                        <td><input type="radio" name="lista" id="radio2"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><input type="text" id="txttexto"></td>
+                        <td><input type="button" value="Ingresar" onclick ="mostrar()"></td>
+
+                    </tr>
+
+                </table>
+
+            </main>
+
+
+        </div>
+
+        <footer></footer>
+        
+    </body>
+</html>

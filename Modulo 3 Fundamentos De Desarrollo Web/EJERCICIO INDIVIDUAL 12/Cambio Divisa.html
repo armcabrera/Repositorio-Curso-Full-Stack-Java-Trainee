@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cambio Divisa</title>
+
+        <script type="text/javascript" src="javaScript.js"></script>
+        <link rel="stylesheet" href="hojaestilo.css"/>
+        <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+        
+    </head>
+
+    <body>
+        
+        <header>
+
+            <h1>Cambio Divisas</h1>
+
+        </header>
+
+        <div class="row">
+
+            <main class="main col-12">
+
+                <p>La siguiente pagina tiene como finalidad realizar el cambio de diferentes divisas</p>
+
+            </main>
+
+            <main class="main col-6">
+
+                <form action="" method="POST" id="form1">
+
+                    <table>
+
+                       
+
+                        <tr>
+
+                            <td><label>Valor en $</label></td>
+                            <td><input id="textingreso" type="text" placeholder="$"> </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><label for="us" >Dolar Estadounidense</label></td>
+                            <td><input id="us" type="radio" value="1" name="divisa"> </td>
+
+                            <td><label for="eu">Euro</label></td>
+                            <td><input id="eu" type="radio" value="2" name="divisa" > </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><label for="yu">Yuan</label></td>
+                            <td><input id="yu" type="radio" value="3" name="divisa" > </td>
+
+                            <td><label for="pm">Peso Mexicano</label></td>
+                            <td><input id="pm" type="radio" value="4" name="divisa" > </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><label for="re">Real</label></td>
+                            <td><input id="re" type="radio" value="5" name="divisa" > </td>
+
+                            <td><label for="ru">Rupia</label></td>
+                            <td><input id="ru" type="radio" value="6" name="divisa"> </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><input type="button" value="Convertir" onclick="cambiodivisa()"></td>
+                            <td><input type="button" value="Borrar" onclick="location.reload()"></td>
+
+                        </tr>
+
+                    </table>
+
+                </form>
+
+
+            </main>
+
+            <main class="main col-6" id="errores">
+                <p>El Resultado es en $</p>
+                <input type="text" name="" id="textresultado" readonly> 
+
+                <h4 id="mensaje" >
+
+                   
+
+                </h4>
+                
+          
+                
+
+                
+            </main>
+
+
+        </div>
+
+        <footer></footer>
+        
+    </body>
+
+</html>

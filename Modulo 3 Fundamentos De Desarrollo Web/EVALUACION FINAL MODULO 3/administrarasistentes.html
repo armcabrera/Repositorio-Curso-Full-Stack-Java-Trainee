@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Administrador Asistentes</title>
+        
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+        <script type="text/javascript" src="jsadministrarasistentes.js"></script>
+        <link rel="stylesheet" href="hojaestilo.css"/>
+        <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>Administrar Asistentes</h1>
+
+        </header>
+
+        <div class="row">
+            
+
+            <main class="col-6 col-s-12 main">
+
+              <h2>Agregar Asistentes</h2>  
+
+                <form id="formasistente" method="POST" action="">
+
+                    <table class="tablapersonalizada">
+
+                        <tr>
+
+                            <td><label for="idasistente"> ID Asistente:</label></td>
+                            <td><input id="idasistente" type="text" name="idasistente" maxlength="4" onkeyUp="return ValNumero(this)"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                           <td> <label for="textnomcompleto">Nombre Completo:</label></td>
+                            <td><input  id="textnomcompleto" type="text" name="textnomcompleto" maxlength="99"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td><label for="textedad">Edad:</label></td>
+                            <td><input  id="textedad" type="text" name="textedad" maxlength="3" onkeyUp="return ValNumero(this)"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td><label for="txtcorreo">Correo:</label></td>
+                            <td><input  id="txtcorreo" type="text" name="txtcorreo"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td><label for="tetelefono">Telefono:</label></td>
+                            <td><input  id="tetelefono" type="text" name="tetelefono" maxlength="12" placeholder="+569xxxxxxxx"></td>
+    
+                        </tr>
+    
+    
+    
+                        <tr>
+    
+                           <td> <label for="feccapacitacion">Fecha Capacitacion:</label></td>
+                           <td> <input id="feccapacitacion" type="date" name="feccapacitacion"></td>
+    
+                        </tr>
+    
+    
+                        <tr>
+    
+                            <td><label for="txthora">Hora Capacitacion:</label></td>
+                            <td><input id="txthora" type="time" name="txthora"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td><label for="textnomcliente">Nombre Del Cliente:</label></td>
+                            <td><input id="textnomcliente" type="text" name="textnomcliente"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td colspan="2"><input type="button" value="Ingresar" onclick="validarasis()"></td>
+    
+                        </tr>
+
+                    </table>
+
+
+                    <ul class="menu">
+                        <li><a href="INDEX.html">Volver Pagina Principal</a></li>
+                    </ul>
+
+                    
+                   
+                </form>
+
+
+            </main>
+
+            <main class="col-6 col-s-12 main" id="listoasistentes">
+
+                <h2>Lista De Asistentes</h2>
+
+                <table id="example" class="display" style="width:100%">
+
+                    <thead>
+
+                        <tr>
+
+                            <td>Id Cliente</td>
+                            <td>Nombre Completo</td>
+                            <td>Correo</td>
+                            <td>Telefono</td>
+                            <td>Eliminar Asistente</td>
+
+                        </tr>
+
+                    </thead>    
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>1</td>
+                            <td>Juan Andres Lopez Vega</td>
+                            <td>ju.andres@gmail.com</td>
+                            <td>+56988776655</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>2</td>
+                            <td>Felipe Pedro Novoa Ortiz</td>
+                            <td>fe.pedro@gmail.com</td>
+                            <td>+56911223344</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>3</td>
+                            <td>Camila Javiera Mercado Muñoz</td>
+                            <td>ca.javiera@gmail.com</td>
+                            <td>+56935715987</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>4</td>
+                            <td>Cristobal Alonso Berrios Caceres</td>
+                            <td>cri.alonso@gmail.com</td>
+                            <td>+56933221100</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>5</td>
+                            <td>Josefa Macarena Olguin Zapata</td>
+                            <td>jo.macarena@gmail.com</td>
+                            <td>+56912547896</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>6</td>
+                            <td>Monica Alicia Quezada Luna</td>
+                            <td>mo.alicia@gmail.com</td>
+                            <td>+56933665501</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>7</td>
+                            <td>Sofia Antonia Cisternas Arce</td>
+                            <td>so.antonia@gmail.com</td>
+                            <td>+56968537529</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>8</td>
+                            <td>Hugo Nicolas Maturana LLanos</td>
+                            <td>hu.nicolas@gmail.com</td>
+                            <td>+56912400036</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>9</td>
+                            <td>Susan Estefanie Lobos Fuentes</td>
+                            <td>su.estefanie@gmail.com</td>
+                            <td>+56966330102</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>10</td>
+                            <td>Rafael Alfonso Velazquez Espinoza</td>
+                            <td>ra.alonso@gmail.com</td>
+                            <td>+56995761832</td>
+                            <td><img  width="25px" src="eliminar.ico" alt=""  onclick="eliminarventa()"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td id="mostrarid"></td>
+                            <td id="mostrarnombre"></td>
+                            <td id="mostrarcorreo"></td>
+                            <td id="mostrartelefono"></td>
+                            <td id="mostrareliminar"></td>
+
+                        </tr>
+
+                    </tbody>    
+
+                </table>
+
+
+
+            </main>
+
+            
+
+
+        </div>
+
+        <footer></footer>
+
+        <script>
+
+            $(document).ready(function() {
+                $('#example').DataTable();
+            } );
+            
+        </script>
+        
+    </body>
+
+</html>

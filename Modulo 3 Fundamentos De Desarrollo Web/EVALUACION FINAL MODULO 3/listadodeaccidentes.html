@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listado De Accidentes</title>
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+
+        <script type="text/javascript" src="jslistadoaccidente.js"></script>
+        <link rel="stylesheet" href="hojaestilo.css"/>
+        <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+
+        <header>
+
+            <h1>Listado De Accidentes</h1>
+
+        </header>
+
+        <div class="row">
+            
+
+            <main class="col-6 col-s-12 main">
+
+              <h2>Agregar Accidente</h2>  
+
+                <form id="formlistacci" method="POST" action="">
+
+                    <table>
+
+                        <tr>
+
+                            <td><label for="idaccidente"> ID Accidentes:</label></td>
+                            <td><input id="idaccidente" type="text" name="idaccidente" maxlength="4" onkeyUp="return ValNumero(this)"></td>
+    
+                        </tr>
+
+                        <tr>
+    
+                            <td> <label for="fecaccidente">Fecha Accidente:</label></td>
+                            <td> <input id="fecaccidente" type="date" name="fecaccidente"></td>
+     
+                         </tr>
+
+                             
+                        <tr>
+    
+                            <td><label for="txthoracciden">Hora Accidente:</label></td>
+                            <td><input id="txthoracciden" type="time" name="txthoracciden"></td>
+    
+                        </tr>
+
+    
+                        <tr>
+    
+                           <td> <label for="textlugaracci">Lugar Accidente:</label></td>
+                            <td><input  id="textlugaracci" type="text" name="textlugaracci" maxlength="149"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td><label for="textorigen">Origen:</label></td>
+                            <td><input  id="textorigen" type="text" name="textorigen" maxlength="100"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td><label for="txtcliente">Cliente:</label></td>
+                            <td>
+
+                                <select class="sel" id="txtcliente">
+
+                                    <option selected value="0">Elija Al Cliente</option>
+                                    <option value="Cliente 1">Cliente 1</option>
+                                    <option value="Cliente 2">Cliente 2</option>
+                                    <option value="Cliente 3">Cliente 3</option>
+                                    <option value="Cliente 4">Cliente 4</option>
+                                    <option value="Cliente 5">Cliente 5</option>
+                                    <option value="Cliente 6">Cliente 6</option>
+
+                                </select>
+
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+    
+                            <td><label for="textconsecuencias">Consecuencias:</label></td>
+                            <td><input id="textconsecuencias" type="text" name="textconsecuencias"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td colspan="2"><input type="button" value="Ingresar" onclick="validaracciden()"></td>
+    
+                        </tr>
+
+                    </table>
+
+                    
+                   
+                </form>
+
+
+            </main>
+
+            <main class="col-6 col-s-12 main" id="listoasistentes">
+
+                <h2>Lista De Accidentes</h2>
+
+                <table id="example" class="display" style="width:100%">
+
+                    <thead>
+
+                        <tr>
+
+                            <td>Id Accidente</td>
+                            <td>Fecha Accidente</td>
+                            <td>Hora Accidente</td>
+                            <td>Lugar accidente</td>
+                            <td>origen</td>
+                            <td>Cliente</td>
+                            <td>Consecuencias</td>
+
+                        </tr>
+
+                    </thead>    
+
+                    <tbody>
+
+                        <tr>
+
+                            <td id="mostrarid"></td>
+                            <td id="mostrarfecha"></td>
+                            <td id="mostrarhora"></td>
+                            <td id="mostrarlugar"></td>
+                            <td id="mostrarorigen"></td>
+                            <td id="mostrarcliente"></td>
+                            <td id="mostrarconsecuencias"></td>
+
+                        </tr>
+
+                    </tbody>    
+
+                </table>
+
+
+
+            </main>
+
+            <main class="col-3 col-s-12 main menu">
+
+                <ul>
+                    <li><a href="INDEX.html">Volver Pagina Principal</a></li>
+                </ul>
+
+
+            </main>
+
+
+        </div>
+
+
+
+        <footer></footer>
+
+        <script>
+
+            $(document).ready(function() {
+                $('#example').DataTable();
+            } );
+            
+        </script>
+        
+    </body>
+</html>

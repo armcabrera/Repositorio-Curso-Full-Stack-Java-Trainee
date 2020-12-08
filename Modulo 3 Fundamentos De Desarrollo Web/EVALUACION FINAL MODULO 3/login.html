@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Usuarios</title>
+        <script type="text/javascript" src="validarut.js"></script>
+        <link rel="stylesheet" href="hojaestilo.css"/>
+        <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>Acceso A Usuarios</h1>
+
+        </header>
+
+        <div class="row">
+
+            <main class="col-9 col-s-12 main">
+
+                <form name="form1" onSubmit="javascript:return Rut(document.form1.rut.value)">
+
+                    <table>
+    
+                        <tr>
+    
+                            <td> Rut:</td>
+                            <td> <input type="text" name="rut" id="textrut"/> </td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td>Clave:</td>
+                            <td><input type="password" maxlength="20" id="txtpass"></td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <td colspan="2"><input type="submit" value="Ingresar" onclick="clave()"></td>
+    
+                        </tr>
+    
+                    </table>
+    
+                
+                
+                </form>
+
+            </main>
+
+            <aside class="col-3 col-s-12 aside menu">
+    
+                <h3>Menu</h3>
+                
+                <ul>
+                    <li><a href="INDEX.html">Volver Pagina Principal</a></li>
+                </ul>
+        
+            </aside>
+       
+            
+
+
+        </div>
+
+        <footer></footer>
+
+
+       
+    </body>
+
+</html>
