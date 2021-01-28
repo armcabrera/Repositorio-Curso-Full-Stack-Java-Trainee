@@ -8,6 +8,7 @@
 	  <title>listausuarios</title>
 	  <link rel="stylesheet" href="Styles.css">
 	  <link rel="icon" href="favicon.ico">
+
 	</head>
 <body>
 <header>
@@ -15,9 +16,32 @@
 </header>
 
   <div class="row">
+  
+  	<main class= " col-2 col-s-12 main">
+        <a href="<%=request.getContextPath() %>/Listadoclientes">Lista usuario Clientes</a><br><br>
+    </main>
+    
+     <main class= " col-3 col-s-12 main">
+        <a href="<%=request.getContextPath() %>/Listadoadmin">Lista usuario Administrativo</a><br><br>
+    </main>
+    
+     <main class= " col-3 col-s-12 main">
+        <a href="<%=request.getContextPath() %>/Listadoprof">Lista usuario Profesional</a><br><br>
+    </main>
+    
+   	<main class="col-2 col-s-12 main">
+   		<a href="<%=request.getContextPath() %>/Crear_usuariocli">Crear usuario</a><br><br>
+   		
+   </main>
+   
+   <main class="col-2 col-s-12 main">
+
+   		<a href="<%=request.getContextPath() %>/inicio">Volver Inicio</a>
+   </main>
+
 
   
-	<main class="col-10 col-s-12 main">
+	<main id="mainusu" class="col-10 col-s-12 main" >
 
 		<table class="tablalistarcapa">
 		    <thead>
@@ -47,16 +71,6 @@
 		</tbody>
 		</table>
 	</main>
-
-   <main class="col-2 col-s-12 main">
-   <a href="<%=request.getContextPath() %>/Crear_usuariocli">Crear usuario</a><br><br>
-   <a href="<%=request.getContextPath() %>/inicio">Volver Inicio</a>
-   </main>
-   
-	
-
-
-
 </div>
 </body>
 </html>

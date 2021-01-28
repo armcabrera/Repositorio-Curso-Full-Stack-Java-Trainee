@@ -65,13 +65,12 @@ boolean insertar = false;
 
 			while (rs.next()) {
 				Profesional p = new Profesional();
-				p.setRun(rs.getString(1));
+				p.setRunusuario(rs.getString(1));
 				p.setNombre(rs.getString(2));
 				p.setApellido(rs.getString(3));
-				p.setFechanacimiento(rs.getString(4));
-				p.setTipousuario(rs.getString(5));
-				p.setTitulo(rs.getString(6));
-				p.setProyecto(rs.getString(7));
+				p.setTelefono(rs.getString(4));
+				p.setTitulo(rs.getString(5));
+				p.setProyecto(rs.getString(6));
 				listaprofesional.add(p);
 			}
 			

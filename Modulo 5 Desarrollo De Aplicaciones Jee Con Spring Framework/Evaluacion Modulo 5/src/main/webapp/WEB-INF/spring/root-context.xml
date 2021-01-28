@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		
+	<bean id="ds"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url"
+			value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+		<property name="username" value="DB_ASESORIAS"></property>
+		<property name="password" value="mbd659"></property>
+	</bean>
+	
+	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds"></property>
+	</bean>
+	
+	<bean id="daocapacitacion"  class="cl.cabrera.grupal6dao.CapacitacionDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daocliente" class="cl.cabrera.grupal6dao.ClienteDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daoadministrativo" class="cl.cabrera.grupal6dao.AdministrativoDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daoprofesional" class="cl.cabrera.grupal6dao.ProfesionalDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daousuario"  class="cl.cabrera.grupal6dao.UsuarioDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daocontacto"  class="cl.cabrera.grupal6dao.ContactoDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daopago"  class="cl.cabrera.grupal6dao.PagoDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daoasistente"  class="cl.cabrera.grupal6dao.AsistenteDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daoaccidente"  class="cl.cabrera.grupal6dao.AccidenteDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daovisita"  class="cl.cabrera.grupal6dao.VisitaDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daoasesoria"  class="cl.cabrera.grupal6dao.AsesoriaDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
+	<bean id="daochequeo"  class="cl.cabrera.grupal6dao.ChequeosDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+			
+</beans>

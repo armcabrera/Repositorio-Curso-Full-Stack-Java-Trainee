@@ -11,6 +11,7 @@ function showContent() {
         div3.style.display='none';
 
 
+
     }else if(document.getElementById("administrativo").checked){
         div1.style.display='none';
         div2.style.display='block';

@@ -65,13 +65,11 @@ public class Listaadministrativo implements Listaintadm {
 
 			while (rs.next()) {
 				Administrativo a = new Administrativo();
-				a.setRun(rs.getString(1));
+				a.setRunusuario(rs.getString(1));
 				a.setNombre(rs.getString(2));
 				a.setApellido(rs.getString(3));
-				a.setFechanacimiento(rs.getString(4));
-				a.setTipousuario(rs.getString(5));
-				a.setCorreo(rs.getString(6));
-				a.setArea(rs.getString(7));
+				a.setCorreo(rs.getString(4));
+				a.setArea(rs.getString(5));
 				listaadmin.add(a);
 			}
 			

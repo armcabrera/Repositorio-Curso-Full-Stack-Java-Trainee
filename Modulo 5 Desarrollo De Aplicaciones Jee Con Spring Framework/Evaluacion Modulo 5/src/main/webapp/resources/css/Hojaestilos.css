@@ -1,0 +1,273 @@
+@charset "ISO-8859-1";
+
+
+/*Para dar responsividad a todas las paginas*/
+
+@media only screen and (max-width: 768px) {
+  /* Para Celular */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* Para Tabletas */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* Para PC */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/* *************************Estilos Generales************* */
+
+*{
+  box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+body {
+  background-color: #F8F8F8;
+  font-family: serif;
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+
+header {
+background-color: #00adb5;
+  padding: 45px;
+  text-align: center;
+  font-family: serif;
+width: 100%;
+}
+
+main {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  
+  /* border: blue 1px solid; */
+}
+
+div {
+    width: 100%;
+    float: left;
+     
+	/* border: red 4px solid; */
+}
+
+p {
+	text-align: justify;
+	font-size: 30px;
+}
+
+footer{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px; 
+}
+
+h1 {
+  color: #393e46;
+  text-align: center;
+  padding: 50px 50px 50px 50px;
+  font-size: 60px;
+}
+
+h2 {
+  color: #00adb5;
+  margin-bottom: 45px;
+}
+
+.alingderecha {
+	text-align: right
+}
+
+.centrado {
+	text-align: center;
+}
+
+.alinizquierda {
+	text-align: left;
+}
+
+a{
+text-decoration: none;
+font-size: 30px;
+font-family: serif;
+  color: blue;
+}
+
+label {
+	
+	font-size: 25px;
+}
+
+.tamañoboton {
+	
+	font-size: 25px;
+}
+
+
+
+/* .botonmenu {
+	font-size: 40px;
+} */
+
+th {
+	
+	font-size: 25px;
+	text-align: center;
+}
+
+td {
+	font-size: 20px;
+	text-align: center;
+}
+
+/* ****************INDEX******************************************************** */
+.foto1index {
+  width: 75%;
+  height: auto;
+  border-radius: 100%;
+  float: right;
+
+  
+}
+.foto2index{
+  width: 75%;
+  height: auto;
+  border-radius: 100%;
+  float: left;
+}
+
+.menu {
+	font-size: 25px;
+}
+
+.primermain{
+	height: 400px;
+}
+
+.segundomain{
+	height: 400px;
+}
+
+.maincontacos{
+	text-align: center;
+}
+
+.listcontactos{
+text-align: left;
+display:inline-block;
+}
+
+table.contactos {
+border-collapse: separate;
+border-spacing: 70px 15px;
+font-size: 20px;
+}
+
+
+/* ****************Contacto******************************************************** */
+
+table.formcontactos {
+border-collapse: separate;
+border-spacing: 70px 15px;
+font-size: 25px;
+}
+
+/* ****************Lista de Consulta******************************************************** */
+
+
+p.comentarios {
+	font-size: 15px;
+}
+
+
+/* ****************Lista de Usuarios******************************************************** */
+
+
+table.listusuarios {
+font-size: 30px;
+}
+
+.imgeliminar {
+	width:30px;
+ 	  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ****************Lista de Clientes******************************************************** */
+
+
+table.listclientes {
+font-size: 26px;
+}
+
+/* ****************Crear usuarios******************************************************** */
+
+
+.menuform {
+	font-size: 22px;	
+}
+
+
+/* ****************Visitas******************************************************** */
+
+.imgacceder {
+		width:30px;
+ 	  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ****************Listado Accidentes******************************************************** */
+
+table.listaccidente{
+
+  margin-top: 50px;
+  width:100%;
+}
+
+/* ****************Listado Asistentes******************************************************** */
+
+table.listaasistentes{
+
+  margin-top: 50px;
+  width:100%;
+}
+
+
+
+

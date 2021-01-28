@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean:beans xmlns:bean="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://www.springframework.org/schema/security"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/security 
+http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<http auto-config="true">
+		<intercept-url pattern="/" access="permitAll" />
+		<intercept-url pattern="/Linkcontacto" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linklistaconsulta" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkcrearcont" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkeliminarcont/{idcontacto}" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkupdatecont" access="hasRole('CLIENTE')" />	
+		<intercept-url pattern="/Linkeditarcont/{idcontacto}" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkircapa" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linklistarcapa" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkcrearcapa" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkeliminarcapa/{id}" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkupdate" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkeditarcapa/{idcapa}" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linklistadoasis" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkircrearasistente" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkcrearasistente" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkeliminarasis/{idasistente}" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkeditarasis/{idasistente}" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkupdateasistente" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linklistaracci" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkaccidentes" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkcrearacci" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkeliminaracci/{accidenteid}" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkeditaracci/{accidenteid}" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linkupdateacci" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/Linklistausuario" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkcrearusuario" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linklistacliente" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkcrearcliente" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeliminarcli/{Runusuario}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeditarcliente/{Runusuario}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkupdatecliente" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linklistaadministrativo" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkcrearadmin" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeliminaradm/{Runusuario}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeditaradministrativo/{Runusuario}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkupdateadministrativo" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linklistaprofesional" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkcrearprofesional" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeliminarpro/{Runusuario}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeditarprofesional/{Runusuario}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkupdateprof" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linklistapagos" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkircrearpago" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkcrearpagos" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeliminarpago/{idpago}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeditarpago/{idpago}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkupdatepago" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linklistachequeos" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkircrearchequeo" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkcrearchequeo" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeliminarchequeo/{idchequeo}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkeditarchequeo/{idchequeo}" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linkupdatechequeo" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/Linklistadovisita" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkircrearvisita" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkcrearvisita" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkeliminarvisita/{idvisita}" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkeditarvisita/{idvisita}" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkupdatevisita" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linklistadochequeosvisita/{idvisita}" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkirasesoria" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linklistarasesorias" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkcrearasesoria" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkeliminaraseso/{idasesoria}" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkeditaraseso/{idasesoria}" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkupdatease" access="hasRole('PROF')" />
+		<intercept-url pattern="/Linkreportes" access="hasRole('PROF')" />
+
+
+		<form-login 
+		login-page="/login"
+		authentication-failure-url="/error"
+		       username-parameter="username"
+		       password-parameter="password"
+		/>
+		<csrf disabled="true"/>
+		<logout logout-success-url="/login" />
+		
+		<access-denied-handler error-page="/accessdenied"/>
+				
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+		<user-service>
+			<user name="cliente" password="{noop}1234" authorities="ROLE_CLIENTE" />
+			<user name="administrativo" password="{noop}5678" authorities="ROLE_ADMIN" />
+			<user name="profesional" password="{noop}6543" authorities="ROLE_PROF" />
+			<user name="jacob" password="{noop}3333" authorities="ROLE_CLIENTE, ROLE_ADMIN, ROLE_PROF" />
+			<user name="oscar" password="{noop}5555" authorities="ROLE_CLIENTE, ROLE_ADMIN, ROLE_PROF" />
+		</user-service>
+		</authentication-provider>
+	</authentication-manager>
+</bean:beans>

@@ -20,7 +20,7 @@
 		       
  			  
 
-         <label>Seleccione el tipo de usuario:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Seleccione el tipo de usuario:</label> &nbsp;&nbsp;&nbsp;&nbsp;
         <label>Cliente</label><input type="radio" name="usuario" value="cliente" id="cliente" onchange="showContent()">&nbsp;&nbsp;&nbsp;&nbsp;
         <label>Administrativo</label><input type="radio" name="usuario" value="administrativo" id="administrativo" onchange="showContent()">&nbsp;&nbsp;&nbsp;&nbsp;
         <label>Profesional</label><input type="radio"name="usuario" value="profesional" id="profesional" onchange="showContent()">&nbsp;&nbsp;&nbsp;&nbsp;   
